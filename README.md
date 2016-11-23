@@ -36,7 +36,11 @@ Once docker installatio is validated you can install redis using docker. Do the 
 
 where your tag is the name of the docker container e.g. josip/docker. !!!Important do not forget the ".(dot)" at the end. 
 
-This will take some time depending on your network connection. Docker uses PORT 6379 to communicate. You can test if the redis is active as follows:
+This will take some time depending on your network connection. Docker uses PORT 6379 to communicate. First run the redis:
+
+- $ docker run {your tag}
+
+You can test if the redis is active as follows:
 
 - $ ./test-redis.sh ???? TODO Joseph I could not get this to work can you tell me exactly what this value is. I also want to set and get some data to running instance. Please provide info to that. you might use something like [redic-cli](http://redis.io/topics/rediscli). also there is an intersting article here ti use --link between multiple containers see https://docs.docker.com/engine/examples/running_redis_service/
 

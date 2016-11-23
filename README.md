@@ -1,10 +1,10 @@
-TODO: Joseph please remove this line before merge, this will give you another skill to manage pull request for your repository. This is how I would write this readme document.
+This is how I would write this readme document.
 
 # Docker-redis
 
 Josip Milovac <paci.paci@yahoo.com.au>
 
-Repository contains necessary scripts to install docker on a local computer, create a docker container for redis, and making calls to redis from the hojst machine.
+Repository contains necessary scripts to install docker on a local computer, create a docker container for redis, and making calls to redis from the host machine.
 
 ## Set up
 
@@ -28,7 +28,7 @@ $ hello-world
 
 ## Install Redis
 
-Once docker installatio is validated you can install redis using docker. Do the following,
+Once docker installation is validated you can install redis using docker. Do the following,
 
 
 - $ cd redis
@@ -36,14 +36,17 @@ Once docker installatio is validated you can install redis using docker. Do the 
 
 where your tag is the name of the docker container e.g. josip/docker. !!!Important do not forget the ".(dot)" at the end. 
 
-This will take some time depending on your network connection. Docker uses PORT 6379 to communicate. You can test if the redis is active as follows:
+This will take some time depending on your network connection. Docker uses PORT 6379 to communicate. First run the redis:
 
-- $ ./test-redis.sh ???? TODO Joseph I could not get this to work can you tell me exactly what this value is. I also want to set and get some data to running instance. Please provide info to that. you might use something like [redic-cli](http://redis.io/topics/rediscli). also there is an intersting article here ti use --link between multiple containers see https://docs.docker.com/engine/examples/running_redis_service/
+- $ docker run {your tag}
 
-you should receive the following 
+You can test if the redis is active as follows:
 
-???? write me what needs to be received.
+- $ ./test-redis.sh {hostname}
 
+hostname is the hostname of where redis is running. This script requires telnet, which can be installed with "yum install telnet -y" if it is not present on the system
+
+you should receive output from the redis server as if you had run the INFO command. Refer to https://redis.io/commands/INFO for what this command returns
 
 
 

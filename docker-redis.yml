@@ -1,0 +1,17 @@
+ - hosts: ?
+   remote_user: root
+   tasks:
+    - name: make sure we have curl
+      yum:
+         name: curl
+         state: present
+    - name: move the script to the machine
+      copy:
+         dest: /install-docker.sh
+         src: ./install-docker.sh
+    - name: make script runnable
+      file:
+         path: /install-docker.sh
+         mode: 0500
+    - name: run the script to install docker
+      shell: /install-docker.sh

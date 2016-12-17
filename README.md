@@ -1,5 +1,3 @@
-This is how I would write this readme document.
-
 # Docker-redis
 
 Josip Milovac <paci.paci@yahoo.com.au>
@@ -47,6 +45,8 @@ You can test if the redis is active as follows:
 hostname is the hostname of where redis is running. This script requires telnet, which can be installed with "yum install telnet -y" if it is not present on the system
 
 you should receive output from the redis server as if you had run the INFO command. Refer to https://redis.io/commands/INFO for what this command returns
+
+- $ 
 
 
 

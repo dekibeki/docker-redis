@@ -48,5 +48,11 @@ you should receive output from the redis server as if you had run the INFO comma
 
 - $ 
 
+##Ansible
+
+Sample ansible playbook in docker-redis.yml
+
+It copies the scripts over and runs them to install all the relevant software on the target
+
 
 
